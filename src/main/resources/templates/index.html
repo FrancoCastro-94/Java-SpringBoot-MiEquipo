@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mi Equipo</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+	<!-- Barra de navegcion -->						
+    <div>
+		<nav class="navbar navbar-expand navbar-dark bg-dark">
+		<div class="container">
+		<a class="navbar-brand" href="/">Mi Equipo</a>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="/buscador"> Eqipos</a>
+			</li>
+			<div>
+				<li class="col-3">
+					<a href="/registro"><button class="btn btn-success my-2 my-sm-0">Regitrate</button></a>
+				</li>
+			</div>
+			
+			</ul>
+		</div>
+	</div>
+		</nav>
+	</div>
+
+	<!-- Boton y Carrusel -->
+	<div class="container-sm container-formulario-index">
+		<div class="row align-items-center" style="margin-top: 35px;">
+			<div class="col-sm-3">
+				<form action="/logincheck" method="POST">
+					<div class="form-group" style="display: flex; justify-content: center;">
+						<h4 style="color: white;">Iniciar Session</h4>
+					</div>
+					<div class="form-group">
+					  <label style="color: white;">Mail</label>
+					  <input type="email" class="form-control" name="username" required style="background-color:rgb(224, 224, 224);">
+					</div>
+					<div class="form-group">
+					  <label style="color: white;">Contraseña</label>
+					  <input type="password" class="form-control" name="password" required style="background-color:rgb(224, 224, 224);">
+					</div>
+					<br>
+					<div class="form-group" style="display: flex; justify-content: center;">
+						<button type="submit" class="btn btn-outline-success borde-boton btn-lg">Ingresar</button>
+					</div>
+				</form>
+				<!-- Error de registro -->
+    
+			<div th:if="${error != null}" class="row justify-content-center">
+				<div class="alert alert-danger">
+			  	<p th:text="${error}" class="errorRegistro"></p>
+			</div>
+
+			  <!-- Imagenes Carrusel -->
+		  </div>
+			</div>
+			<div class="col" style="padding-right: 0px;">
+				<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+					  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+					  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+					  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner">
+					  <div class="carousel-item active">
+						<img src="/img/carusel-1.jpg" class="d-block w-100" height="500px" style="border-radius: 0px 15px 15px 0px;">
+						<div class="carousel-caption d-none d-md-block">
+						  <h5>Unete a un equipo</h5>
+						</div>
+					  </div>
+					  <div class="carousel-item">
+						<img src="/img/carrusel-2.jpg" class="d-block w-100" height="500px" style="border-radius: 0px 15px 15px 0px;">
+						<div class="carousel-caption d-none d-md-block">
+						  <h5>Encuentar junto a tu equipo un rival</h5>
+						</div>
+					  </div>
+					  <div class="carousel-item">
+						<img src="/img/carrusel-3.jpg" class="d-block w-100" height="500px" style="border-radius: 0px 15px 15px 0px;">
+						<div class="carousel-caption d-none d-md-block">
+						  <h5>Participa de interesantes competencias</h5>
+						</div>
+					  </div>
+					</div>
+				</div>
+			</div>	
+	  </div>
+	</div>
+		
+			
+
+	<!-- Scrips -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

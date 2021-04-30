@@ -1,0 +1,85 @@
+
+
+
+body{
+    background-image: url(/img/fondo.jpg);
+    background-size: cover;
+}
+/*body::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #343a4070;
+}*/
+.container-formulario-index{
+    background-color: #343a40ea;
+    border-radius: 15px;
+}
+.box-formulario-registro-ancho{
+    align-content:  center;
+    color: white;
+    margin-top: 35px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #343a40ea;
+    
+}
+#boton-registro{
+    width: 200px;
+}
+.centrar{
+    text-align: center;
+}
+.fondo-gris{
+    background-color: #343a40ea;
+    width: 100px;
+    color: white;
+    
+}
+.borde-boton{
+    border-width: 2px;
+    margin-left: 16px;
+}
+#buscador-equipos{
+    background-color:  #343a40ea;
+    padding-block: 25px;
+    border-radius: 10px;
+}
+
+
+.tabla-fondo{
+    background-color:  #343a40ea;
+    border-radius: 10px;
+}
+
+.container-usuario{
+    height: 500px;
+    background-color:  #343a40ea;
+    border-radius: 10px;
+    margin-top: 35px;
+}
+
+.row-usuario{
+    height: 500px;
+}
+#icon-camiseta{
+    height: 300px;
+}
+
+#numero-jugador{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#imagen-usuario{
+    height: 12rem;
+    width: 14rem;
+    border-radius: 1rem;
+}
+
+#icono-escudo{
+    height: 250px;
+}
